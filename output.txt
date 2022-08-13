@@ -1,0 +1,1 @@
+It took 0:00:00.590694 for the AI to reach 11 winning mean threshold
