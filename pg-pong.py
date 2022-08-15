@@ -5,7 +5,7 @@ import gym
 import datetime
 
 # hyperparameters
-H = 200  # number of hidden layer neurons
+H = 400  # number of hidden layer neurons
 batch_size = 10  # every how many episodes to do a param update?
 learning_rate = 1e-4
 gamma = 0.99  # discount factor for reward
@@ -139,10 +139,14 @@ while True:
 
         if running_reward > -15:
             end = datetime.datetime.now()
+            print(f'The start time is {start}')
+            print(f'The end time is {end}')
             print(f'It took {end - start} for the AI to reach winning mean threshold')
-            file_path = 'output.txt'
-            with open(file_path, "a") as o:
-                o.write(f'It took {end - start} for the AI to reach winning mean threshold')
+            file_path = 'output1.txt'
+            with open(file_path, "a") as out:
+                out.write(f'It took {end - start} for the AI to reach winning mean threshold')
+                out.write(f'The start time is {start}')
+                out.write(f'The end time is {end}')
             print("Output has been saved")
             break
 
