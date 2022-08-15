@@ -1,1 +1,1 @@
-It took 0:00:00.590694 for the AI to reach 11 winning mean threshold
+It took 0:00:00.590694 for the AI to reach 11 winning mean thresholdIt took 1 day, 0:41:52.932513 for the AI to reach winning mean thresholdThe start time is 2022-08-13 11:22:53.693610The end time is 2022-08-14 12:04:46.626123
