@@ -7,7 +7,7 @@ import datetime
 # hyperparameters
 H = 200  # number of hidden layer neurons
 batch_size = 10  # every how many episodes to do a param update?
-learning_rate = 1e-4
+learning_rate = 1e-2
 gamma = 0.99  # discount factor for reward
 decay_rate = 0.99  # decay factor for RMSProp leaky sum of grad^2
 resume = False  # resume from previous checkpoint?
@@ -139,10 +139,14 @@ while True:
 
         if running_reward > -15:
             end = datetime.datetime.now()
+            print(f'The start time is {start}')
+            print(f'The end time is {end}')
             print(f'It took {end - start} for the AI to reach winning mean threshold')
-            file_path = 'output.txt'
-            with open(file_path, "a") as o:
-                o.write(f'It took {end - start} for the AI to reach winning mean threshold')
+            file_path = 'output5.txt'
+            with open(file_path, "a") as out:
+                out.write(f'It took {end - start} for the AI to reach winning mean threshold')
+                out.write(f'The start time is {start}')
+                out.write(f'The end time is {end}')
             print("Output has been saved")
             break
 
